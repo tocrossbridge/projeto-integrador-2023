@@ -17,5 +17,5 @@ class Shark extends Tamagotchi {
 }
 
 $shark = new Shark("Shark", "White", "Hammer");
-$shark->intro();
+// $shark->intro();
 ?>

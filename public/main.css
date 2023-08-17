@@ -1,0 +1,60 @@
+body {
+    height: 100vh;
+}
+
+.tamagotchi__box {
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+
+    border-radius: 12px;
+    background: rgb(225, 101, 215);
+}
+
+.tamagotchi__screen {
+    width: 400px;
+    height: 400px;
+
+    display: flex;
+    margin: auto;
+
+    background-color: rgb(235, 235, 235);
+}
+
+.tamagotchi__top-box {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin: auto auto 20px auto;
+}
+
+.tamagotchi__bottom-box {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin: 20px auto auto auto;
+}
+
+.tamagotchi__button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(218, 218, 109);
+}
+
+.tamagotchi__pet {
+    width: 200px;
+    height: 60px;
+
+    margin: auto;
+    background-color: rgb(139, 139, 139);
+}
+
+.tamagotchi__game-options {
+    display: none;
+    margin: auto;
+}
+
+.tamagotchi__game-options__game {
+    display: none;
+}
