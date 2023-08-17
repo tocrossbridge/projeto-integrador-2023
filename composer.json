@@ -1,0 +1,16 @@
+{
+    "name": "beatr/tamagotchi-php",
+    "description": "tamagotchi builded with PHP",
+    "license": "MIT License",
+    "autoload": {
+        "psr-4": {
+            "Beatr\\TamagotchiPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "btrz"
+        }
+    ],
+    "require": {}
+}
