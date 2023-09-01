@@ -1,0 +1,68 @@
+<!--
+    8 – Crie um formulário que receba 3 valores sendo um número, um operador matemático e
+    outro número conforme imagem abaixo:
+    Crie uma função para cada operação, e execute a operação de acordo com a opção escolhida
+    pelo usuário. Exiba a operação com o resultado.
+-->
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Calcula aí pô</title>
+    </head>
+
+    <body>
+        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <input type="number" name="valor1" required>
+            <select name="operador" required>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input type="number" name="valor2" required>
+            <input type="submit" value="Calcular">
+        </form>
+
+        <?php
+            if ($_SERVER["REQUEST_METHOD"] === "POST") {
+                $valor1 = floatval($_POST["valor1"]);
+                $valor2 = floatval($_POST["valor2"]);
+                $operador = $_POST["operador"];
+
+                function somar($a, $b) { return $a + $b; }
+
+                function subtrair($a, $b) { return $a - $b; }
+
+                function multiplicar($a, $b) { return $a * $b; }
+
+                function dividir($a, $b) {
+                    if ($b == 0) {
+                        return "Divisão por zero não é permitido aqui, dá teus pulo.";
+                    }
+                    return $a / $b;
+                }
+
+                switch ($operador) {
+                    case "+":
+                        $resultado = somar($valor1, $valor2);
+                        break;
+                    case "-":
+                        $resultado = subtrair($valor1, $valor2);
+                        break;
+                    case "*":
+                        $resultado = multiplicar($valor1, $valor2);
+                        break;
+                    case "/":
+                        $resultado = dividir($valor1, $valor2);
+                        break;
+                    default:
+                        $resultado = "Operador inválido";
+                }
+
+                echo "<p>$valor1 $operador $valor2 = $resultado</p>";
+            }
+        ?>
+    </body>
+
+</html>
